@@ -1,0 +1,18 @@
+<!-- <p>
+	product-details works!
+</p> -->
+
+<h2>Product Details</h2>
+
+<!-- <p>{{idd}}</p> -->
+<div *ngIf="product">
+  <h3>{{ product.title }}</h3>
+  <!-- <img src="product.imageUri"> -->
+  <img [src]="product.imageUri" width="200em" [alt]="product.title + ' image'">
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+  <p>
+    <a routerLink="/shipping">Shipping Prices</a> 
+  </p>
+  <button (click)="addToCart(product)">Buy</button>
+</div>
